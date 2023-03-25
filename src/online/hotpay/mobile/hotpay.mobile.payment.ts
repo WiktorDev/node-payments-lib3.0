@@ -21,7 +21,7 @@ export class HotpayMobilePayment extends BasePayment {
         return new PaymentGeneratedEntity(`${this.apiUrl}?${objectToQueryString(this.params)}`)
     }
 
-    public generateNotificationPassword(payload: any, notificationPassword: string): string {
+    public generateNotificationHash(payload: any, notificationPassword: string): string {
         return hash(HashingMethodsEnum.SHA256, [
             notificationPassword,
             payload['KWOTA'],

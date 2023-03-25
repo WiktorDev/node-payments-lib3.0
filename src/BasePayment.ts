@@ -2,7 +2,7 @@ import axios, {AxiosBasicCredentials, AxiosRequestConfig, AxiosResponse} from "a
 
 export type HTTP_METHODS = "GET"|"POST"|"PUT"|"DELETE"
 
-export abstract class BasePayment{
+export abstract class BasePayment {
     protected async doRequest(url: string, method:HTTP_METHODS='GET', data?:any, headers?:object, auth?:AxiosBasicCredentials): Promise<AxiosResponse>{
         const requestConfiguration: AxiosRequestConfig = {
             method: method,
