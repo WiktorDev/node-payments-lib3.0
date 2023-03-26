@@ -1,3 +1,5 @@
+import {IcehostPayment} from "./online/icehost/icehost.payment";
+
 export {DpayDirectbillingPayment} from "./online/dpay/directbilling/dpay.directbilling.payment";
 export {MicrosmsPayment} from "./online/microsms/microsms.payment";
 export {PaybylinkPayment} from "./online/paybylink/paybylink.payment";
@@ -10,6 +12,7 @@ export {DotpayPayment} from "./online/dotpay/dotpay.payment";
 export {CashbillPayment} from "./online/cashbill/cashbill.payment";
 export {HotpayPayment} from './online/hotpay/hotpay.payment'
 export {HotpayMobilePayment} from "./online/hotpay/mobile/hotpay.mobile.payment";
+export {IcehostPayment} from './online/icehost/icehost.payment'
 
 /**
  * SMS
