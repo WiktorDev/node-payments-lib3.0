@@ -30,10 +30,10 @@ export class MicrosmsPayment extends BasePayment {
             throw new PaymentException("amount can't be null!")
         }
         this.params.signature = hash(this.hashingMethod, `${this.serviceId}${this.hash}${this.params.amount}`)
-        console.log(objectToQueryString(this.params))
         const paymentUrl = `${MicrosmsPayment.API_BASE_URL}?${objectToQueryString(this.params)}`
         const microsmsResponse = await this.doRequest(paymentUrl)
-        if (microsmsResponse && microsmsResponse.data){
+
+        if (microsmsResponse.data && !microsmsResponse.data.includes('<!doctype html>')){
             throw new PaymentException(`[MicroSMS] ${microsmsResponse.data}`)
         }
         return new PaymentGeneratedEntity(`${MicrosmsPayment.API_BASE_URL}?${objectToQueryString(this.params)}`);
