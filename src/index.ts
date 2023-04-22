@@ -14,7 +14,7 @@ export {HotpayPayment} from './online/hotpay/hotpay.payment'
 export {HotpayMobilePayment} from "./online/hotpay/mobile/hotpay.mobile.payment";
 export {IcehostPayment} from './online/icehost/icehost.payment'
 export {PaypalPayment} from './online/paypal/paypal.payment'
-
+export {Host2PlayPayment} from './online/host2play/host2play.payment'
 /**
  * SMS
  */
