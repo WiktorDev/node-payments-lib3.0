@@ -10,7 +10,7 @@ export class Host2playParams {
   amount: number
 
   @IsOptional()
-  @IsCurrency()
+  @IsString()
   currency: string
 
   @IsOptional()

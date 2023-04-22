@@ -19,5 +19,6 @@ npm install node-payments-lib3.0
 - GetPay (sms)
 
 ## Supported wallets:
-- LvlUP
+- Host2Play
+- PayPal
 - IceHost
