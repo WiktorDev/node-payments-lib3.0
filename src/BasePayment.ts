@@ -1,4 +1,5 @@
 import axios, {AxiosBasicCredentials, AxiosRequestConfig, AxiosResponse} from "axios";
+const project = require('../package.json')
 
 export type HTTP_METHODS = "GET"|"POST"|"PUT"|"DELETE"
 
@@ -8,7 +9,7 @@ export abstract class BasePayment {
             method: method,
             url: url,
             headers: {
-                'User-Agent': 'node-payments-lib/3.0'
+                'User-Agent': `node-payments-lib/${project.version}`
             },
             data: data,
             maxRedirects: 0,
