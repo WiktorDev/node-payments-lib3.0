@@ -22,3 +22,4 @@ npm install node-payments-lib3.0
 - Host2Play
 - PayPal
 - IceHost
+- SkillHost
