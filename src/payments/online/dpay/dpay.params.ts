@@ -1,4 +1,4 @@
-import {IsNumber, IsString} from "class-validator";
+import {IsEmail, IsNumber, IsOptional, IsString} from "class-validator";
 
 export class DpayParams {
     private service: string
@@ -15,6 +15,7 @@ export class DpayParams {
     @IsString()
     url_ipn: string
     accept_tos: number = 1
+
     checksum: string
 
     installment?: boolean
@@ -23,14 +24,20 @@ export class DpayParams {
     paypal?: boolean
     nobanks?: boolean
     channel?: string
+
+    @IsOptional()
+    @IsEmail()
     email?: string
+
     client_name?: string
     client_surname?: string
     description?: string
     custom?: string
-    style?: string
+    style?: STYLES
 
     constructor(service: string) {
         this.service = service;
     }
 }
+
+type STYLES = "default"|"dark"|"orange"
