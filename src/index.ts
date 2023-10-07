@@ -14,6 +14,7 @@ export {IcehostPayment} from './payments/wallets/icehost/icehost.payment'
 export {PaypalPayment} from './payments/wallets/paypal/paypal.payment'
 export {Host2PlayPayment} from './payments/wallets/host2play/host2play.payment'
 export {SkillHostPayment} from './payments/wallets/skillhost/skillhost.payment'
+export {NHostPayment} from './payments/wallets/nhost/nhost.payment'
 /**
  * SMS
  */
