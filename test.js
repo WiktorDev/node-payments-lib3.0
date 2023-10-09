@@ -1,9 +1,12 @@
+const express = require('express')
 
-(async() => {
-    try {
+const app = express()
 
-    }catch (error){
-        console.log(error)
-    }
+app.use(express.json())
 
-})()
+app.post('/', function (req, res) {
+    console.log(req.body)
+    res.send('OK')
+})
+
+app.listen(3000)
