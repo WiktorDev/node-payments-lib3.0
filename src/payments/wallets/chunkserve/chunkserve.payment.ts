@@ -42,7 +42,7 @@ export class ChunkServePayment extends BasePayment {
         }
         return response.data.data;
     }
-    createSignature(transactionId: string, amount: number): string {
-        return hash(HashingMethodsEnum.SHA1, `${transactionId}|${amount}|${this.apikey}`)
+    createSignature(transactionId: string): string {
+        return hash(HashingMethodsEnum.SHA1, `${transactionId}|${this.apikey}`)
     }
 }
