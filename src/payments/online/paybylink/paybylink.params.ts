@@ -3,8 +3,7 @@ import {IsEmail, IsNumber, IsOptional, IsString, IsUrl} from "class-validator";
 export class PaybylinkParams {
     private shopId: number
 
-    @IsNumber()
-    price: number
+    price: any
 
     @IsOptional()
     @IsString()

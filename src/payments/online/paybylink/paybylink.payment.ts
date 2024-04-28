@@ -21,6 +21,7 @@ export class PaybylinkPayment extends BasePayment {
 
     public async generatePayment(): Promise<PaymentGeneratedEntity> {
         await validateObject(PaybylinkParams, this.params)
+        this.params.price = this.params.price.toFixed(2)
         this.params.signature = hash(HashingMethodsEnum.SHA256, `${this.secret_hash}|${Object.values(this.params).join('|')}`)
         const response = await this.doRequest('https://secure.pbl.pl/api/v1/transfer/generate', 'POST', this.params)
         if (response.status !== 200)
