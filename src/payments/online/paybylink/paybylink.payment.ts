@@ -53,7 +53,7 @@ export class PaybylinkPayment extends BasePayment {
             payload['transactionId'],
             payload['control'],
             payload['email'],
-            payload['amountPaid'],
+            payload['amountPaid'].toFixed(2),
             payload['notificationAttempt'],
             payload['paymentType'],
             payload['apiVersion']
