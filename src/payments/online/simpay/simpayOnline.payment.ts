@@ -34,10 +34,17 @@ export class SimpayOnlinePayment extends BasePayment {
     }
 
     public generateNotificationSignature(payload: any): string {
-        const filteredPayload = { ...payload };
-        delete filteredPayload.signature;
-        const signatureString = Object.values(filteredPayload).join('|');
-        const stringToHash = `${signatureString}|${this.serviceHash}`;
-        return hash(HashingMethodsEnum.SHA256, stringToHash);
+        return hash(HashingMethodsEnum.SHA256, [
+            payload.id,
+            payload.service_id,
+            payload.status,
+            payload.amount.value,
+            payload.amount.currency,
+            payload.amount.commission,
+            payload.control,
+            payload.channel,
+            payload.environment,
+            this.serviceHash
+        ].join('|'));
     }
 }
