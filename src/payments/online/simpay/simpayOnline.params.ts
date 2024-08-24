@@ -1,5 +1,4 @@
 import {IsNumber, IsOptional, IsString, IsUrl, IsArray, ValidateNested, IsBoolean} from "class-validator";
-import {Type} from "class-transformer";
 
 export class SimpayOnlineParams {
     @IsNumber()
@@ -19,28 +18,23 @@ export class SimpayOnlineParams {
 
     @IsOptional()
     @ValidateNested({each: true})
-    @Type(() => Customer)
     customer?: Customer;
 
     @IsOptional()
     @ValidateNested({each: true})
-    @Type(() => PaymentDetails)
     billing?: PaymentDetails;
 
     @IsOptional()
     @ValidateNested({each: true})
-    @Type(() => PaymentDetails)
     shipping?: PaymentDetails;
 
     @IsOptional()
     @IsArray()
     @ValidateNested({each: true})
-    @Type(() => CartItem)
     cart?: CartItem[];
 
     @IsOptional()
     @ValidateNested()
-    @Type(() => ReturnUrls)
     returns?: ReturnUrls = new ReturnUrls();
 
     @IsOptional()
@@ -54,14 +48,11 @@ export class SimpayOnlineParams {
 
     @IsOptional()
     @ValidateNested()
-    @Type(() => ChannelTypes)
     channelTypes?: ChannelTypes;
 
     @IsOptional()
     @IsString()
     referer?: string;
-
-    // signature: string;
 }
 
 class ReturnUrls {
