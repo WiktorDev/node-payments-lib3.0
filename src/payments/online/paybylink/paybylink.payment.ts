@@ -41,8 +41,6 @@ export class PaybylinkPayment extends BasePayment {
             notifyStatusURL: notifyStatusURL
         }
 
-
-
         console.log(isNull(control))
         const response = await this.doRequest('https://api-v4.yshop.pl/shops/4/payments/notification/microsms_transfer', 'POST')
         console.log(response.data)

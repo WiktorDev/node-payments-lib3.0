@@ -5,6 +5,7 @@ export {PaybylinkPaysafecardPayment} from "./payments/online/paybylink/paysafeca
 export {PaybylinkDirectbillingPayment} from "./payments/online/paybylink/directbilling/paybylink.directbilling.payment";
 export {Przelewy24Payment} from "./payments/online/przelewy24/przelewy24.payment";
 export {SimpayDirectbillingPayment} from "./payments/online/simpay/simpayDirectbilling.payment";
+export {SimpayOnlinePayment} from "./payments/online/simpay/simpayOnline.payment";
 export {DpayPayment} from "./payments/online/dpay/dpay.payment";
 export {DotpayPayment} from "./payments/online/dotpay/dotpay.payment";
 export {CashbillPayment} from "./payments/online/cashbill/cashbill.payment";
