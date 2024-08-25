@@ -15,8 +15,9 @@ npm install node-payments-lib3.0
 - MicroSMS (Transfer, SMS)
 - PayByLink (Transfer, PaySafeCard, DirectBilling, SMS)
 - Przelewy24 (Transfer)
-- SimPay (DirectBilling, SMS)
+- SimPay (DirectBilling, Transfer, SMS)
 - GetPay (sms)
+- PayNow (Transfer)
 
 ## Supported wallets:
 - Host2Play
