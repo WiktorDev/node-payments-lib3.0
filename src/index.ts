@@ -15,6 +15,7 @@ export {PaypalPayment} from './payments/wallets/paypal/paypal.payment'
 export {Host2PlayPayment} from './payments/wallets/host2play/host2play.payment'
 export {SkillHostPayment} from './payments/wallets/skillhost/skillhost.payment'
 export {NHostPayment} from './payments/wallets/nhost/nhost.payment'
+export { PaynowPayment } from './payments/online/paynow/paynow.payment'
 /**
  * SMS
  */
